@@ -30,7 +30,7 @@ app.get("/aboutme",(req,res)=>{
 app.get("/result", (req,res)=>{
     console.log(req.query.movieName)
     console.log(process.env.API_KEY)
-    const url=`http://www.omdbapi.com/?apikey=${process.env.API_KEY}&s=${req.query.movieName}`
+    const url=`http://www.omdbapi.com/?apikey=73fbd909&s=${req.query.movieName}`
     request(url,function(error,response,body){
         if(!error && response.statusCode == 200){
             const data = JSON.parse(body)
